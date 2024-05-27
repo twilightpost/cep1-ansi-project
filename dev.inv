@@ -1,13 +1,13 @@
 [nodes]
-node02
-node03
+node02 ansible_user=ansiuser
+node03 ansible_user=ansiuser
 
 [no_nodes]
-nokube
+nokube ansible_user=ansiuser
 
 [all:children]
-nodes
-nokube
+nodes ansible_user=ansiuser
+nokube ansible_user=ansiuser
 
 [all_nokube:children]
-no_nodes
+no_nodes ansible_user=ansiuser
